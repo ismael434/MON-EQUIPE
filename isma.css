@@ -317,7 +317,6 @@ header {
 
 .match {
     width: 100%;
-    min-width: 0;
     display: grid;
     grid-template-columns: 70px minmax(0, 1fr) 65px;
     align-items: center;
@@ -330,20 +329,26 @@ header {
 }
 
 .date {
+    width: 70px;
     text-align: center;
 }
 
 .date strong {
     display: block;
     color: #31d47f;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 .date span {
+    display: block;
+    margin-top: 3px;
     font-size: 11px;
 }
 
 .equipes {
+    width: 100%;
     min-width: 0;
     display: flex;
     align-items: center;
@@ -355,20 +360,120 @@ header {
 }
 
 .equipes span {
+    min-width: 0;
     max-width: 42%;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .equipes b {
-    color: #31d47f;
     flex-shrink: 0;
+    color: #31d47f;
+    font-size: 13px;
 }
 
 .heure {
+    width: 65px;
     text-align: center;
     color: #31d47f;
     font-size: 13px;
     font-weight: bold;
+}
+
+/* ================= MATCHS SUR TELEPHONE ================= */
+
+@media (max-width: 600px) {
+
+    .match {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 55px minmax(0, 1fr);
+        gap: 10px;
+        padding: 15px 10px;
+        margin-bottom: 12px;
+    }
+
+    .date {
+        width: 55px;
+        text-align: center;
+    }
+
+    .date strong {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    .date span {
+        font-size: 9px;
+        margin-top: 3px;
+    }
+
+    .equipes {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .equipes span {
+        max-width: 40%;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .equipes b {
+        font-size: 10px;
+        flex-shrink: 0;
+    }
+
+    .heure {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding-top: 8px;
+        margin-top: 2px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+/* ================= PETIT TELEPHONE ================= */
+
+@media (max-width: 380px) {
+
+    .match {
+        grid-template-columns: 48px minmax(0, 1fr);
+        padding: 13px 8px;
+        gap: 7px;
+    }
+
+    .date {
+        width: 48px;
+    }
+
+    .date strong {
+        font-size: 14px;
+    }
+
+    .date span {
+        font-size: 8px;
+    }
+
+    .equipes {
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    .equipes b {
+        font-size: 9px;
+    }
+
+    .heure {
+        font-size: 10px;
+    }
 }
 
 /* =========================================================

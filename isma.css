@@ -1,3 +1,7 @@
+/* =========================================================
+   MON ÉQUIPE — STYLE COMPLET ET RESPONSIVE
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,23 +19,31 @@ body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background: #08110d;
-    color: white;
+    color: #ffffff;
     line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header {
+    width: 100%;
+}
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     width: 100%;
-    min-height: 60px;
+    min-height: 62px;
+    padding: 12px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 5%;
-    background: rgba(5, 12, 8, 0.97);
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 12, 8, 0.98);
+    border-bottom: 1px solid rgba(49, 212, 127, 0.15);
 }
 
 .logo {
@@ -41,28 +53,35 @@ body {
     white-space: nowrap;
 }
 
-.navbar nav {
+.menu {
     display: flex;
     align-items: center;
-    gap: 22px;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
 }
 
-.navbar nav a {
-    color: white;
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    color: #ffffff;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;
 }
 
-.theme-btn,
-.menu-btn {
-    border: 0;
-    background: transparent;
-    color: white;
-    cursor: pointer;
+.menu a:hover {
+    color: #31d47f;
 }
 
+.menu-btn,
 .theme-btn {
-    font-size: 19px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .menu-btn {
@@ -70,67 +89,168 @@ body {
     font-size: 25px;
 }
 
-/* ================= HERO ================= */
+.theme-btn {
+    font-size: 19px;
+}
+
+/* =========================================================
+   ACCUEIL / HERO
+========================================================= */
 
 .hero {
     width: 100%;
-    min-height: 75vh;
+    min-height: 78vh;
+    padding: 80px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 60px 20px;
+
     background:
-        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.75)),
-        url("5906934506231370193.jpg") center / cover no-repeat;
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("5906934506231370193.jpg")
+        center / cover no-repeat;
 }
 
 .hero-content {
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
 }
 
-.hero-small {
+.subtitle {
     color: #31d47f;
     font-size: 13px;
     font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
 }
 
 .hero h1 {
-    font-size: clamp(42px, 9vw, 80px);
+    font-size: clamp(45px, 8vw, 80px);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
-.hero-content > p:not(.hero-small) {
-    color: #ddd;
-    font-size: 17px;
-    margin-bottom: 25px;
+.description {
+    color: #dddddd;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    max-width: 100%;
+    padding: 12px 23px;
+    border-radius: 30px;
     background: #31d47f;
     color: #041008;
-    padding: 12px 22px;
-    border-radius: 30px;
     text-decoration: none;
+    font-size: 14px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* ================= SECTIONS ================= */
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   PRESENTATION
+========================================================= */
+
+.presentation {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 6%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 50px;
+}
+
+.presentation-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.presentation-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.presentation-text {
+    min-width: 0;
+}
+
+.presentation-text > span {
+    color: #31d47f;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presentation-text h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+.presentation-text p {
+    color: #bbbbbb;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   STATISTIQUES
+========================================================= */
+
+.stats {
+    width: 100%;
+    padding: 55px 6%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: #050c08;
+}
+
+.stat {
+    text-align: center;
+    min-width: 0;
+}
+
+.stat strong {
+    display: block;
+    color: #31d47f;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 9px;
+}
+
+.stat span {
+    color: #dddddd;
+    font-size: 13px;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
 
 .section {
     width: 100%;
-    padding: 75px 6%;
+    padding: 85px 6%;
 }
 
 .section-title {
+    width: 100%;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .section-title p {
@@ -138,7 +258,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 .section-title h2 {
@@ -146,39 +266,9 @@ body {
     line-height: 1.2;
 }
 
-/* ================= PRESENTATION ================= */
-
-.presentation-content {
-    max-width: 750px;
-    margin: auto;
-    text-align: center;
-    color: #ccc;
-}
-
-/* ================= STATS ================= */
-
-.stats {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 45px 6%;
-    background: #050c08;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat strong {
-    display: block;
-    color: #31d47f;
-    font-size: 38px;
-    line-height: 1;
-    margin-bottom: 8px;
-}
-
-/* ================= EQUIPES ================= */
+/* =========================================================
+   CHOIX DES JOUEURS
+========================================================= */
 
 .joueurs {
     width: 100%;
@@ -186,15 +276,16 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .joueur {
     width: 100%;
+    min-width: 0;
+    padding: 30px;
     background: #101c16;
-    border: 1px solid rgba(49,212,127,.15);
-    border-radius: 15px;
-    padding: 28px;
+    border: 1px solid rgba(49, 212, 127, 0.15);
+    border-radius: 16px;
 }
 
 .joueur-info span {
@@ -205,16 +296,18 @@ body {
 }
 
 .joueur-info h3 {
-    font-size: 23px;
-    margin: 8px 0;
+    font-size: 24px;
+    margin: 10px 0 8px;
 }
 
 .joueur-info p {
-    color: #aaa;
+    color: #aaaaaa;
     font-size: 14px;
 }
 
-/* ================= MATCHS ================= */
+/* =========================================================
+   MATCHS
+========================================================= */
 
 .matchs {
     width: 100%;
@@ -224,15 +317,16 @@ body {
 
 .match {
     width: 100%;
+    min-width: 0;
     display: grid;
-    grid-template-columns: 65px minmax(0, 1fr) 60px;
+    grid-template-columns: 70px minmax(0, 1fr) 65px;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
     background: #101c16;
-    border: 1px solid rgba(49,212,127,.12);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 14px;
+    border: 1px solid rgba(49, 212, 127, 0.12);
+    border-radius: 15px;
 }
 
 .date {
@@ -241,8 +335,8 @@ body {
 
 .date strong {
     display: block;
-    font-size: 24px;
     color: #31d47f;
+    font-size: 24px;
 }
 
 .date span {
@@ -254,7 +348,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     text-align: center;
     font-size: 13px;
     font-weight: bold;
@@ -262,7 +356,7 @@ body {
 
 .equipes span {
     max-width: 42%;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .equipes b {
@@ -273,112 +367,136 @@ body {
 .heure {
     text-align: center;
     color: #31d47f;
+    font-size: 13px;
     font-weight: bold;
 }
 
-/* ================= TROPHÉES ================= */
+/* =========================================================
+   TROPHÉES
+========================================================= */
 
 .trophees {
     width: 100%;
-    max-width: 950px;
+    max-width: 1000px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .trophee {
-    background: #101c16;
-    border: 1px solid rgba(49,212,127,.12);
-    border-radius: 15px;
-    padding: 25px 18px;
+    min-width: 0;
+    padding: 30px 20px;
     text-align: center;
+    background: #101c16;
+    border: 1px solid rgba(49, 212, 127, 0.12);
+    border-radius: 15px;
 }
 
 .trophee-icon {
-    font-size: 35px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-/* ================= GALERIE ================= */
+.trophee h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.trophee p {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+/* =========================================================
+   GALERIE
+========================================================= */
 
 .galerie {
     width: 100%;
-    max-width: 850px;
+    max-width: 900px;
     margin: auto;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 16px;
 }
 
 .galerie img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
-/* ================= CONTACT ================= */
-
-.contact {
-    text-align: center;
-}
-
-.contact > p {
-    max-width: 600px;
-    margin: auto;
-    color: #bbb;
-}
-
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
     width: 100%;
-    padding: 25px 15px;
+    padding: 30px 15px;
     text-align: center;
     background: #050c08;
-    color: #888;
+    color: #888888;
     font-size: 12px;
 }
 
-/* ================= TABLETTE ================= */
+/* =========================================================
+   TABLETTE
+========================================================= */
 
 @media (max-width: 900px) {
 
     .navbar {
-        padding: 12px 18px;
+        padding: 11px 18px;
     }
 
     .menu-btn {
         display: block;
-        order: 2;
+        order: 3;
     }
 
     .theme-btn {
-        order: 1;
         margin-left: auto;
-        margin-right: 15px;
+        margin-right: 8px;
+        order: 2;
     }
 
-    .navbar nav {
+    .menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
-        right: 0;
         width: 100%;
+        padding: 0;
         flex-direction: column;
         gap: 0;
         background: #050c08;
+        border-bottom: 1px solid rgba(49, 212, 127, 0.15);
     }
 
-    .navbar nav.active {
+    .menu.active {
         display: flex;
     }
 
-    .navbar nav a {
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
         width: 100%;
         padding: 14px 20px;
         text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .presentation {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .presentation-text {
+        text-align: center;
     }
 
     .joueurs {
@@ -390,54 +508,116 @@ footer {
     }
 }
 
-/* ================= TÉLÉPHONE ================= */
+/* =========================================================
+   TÉLÉPHONE
+========================================================= */
 
 @media (max-width: 600px) {
 
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .navbar {
+        width: 100%;
+        height: 56px;
         min-height: 56px;
-        padding: 10px 14px;
+        padding: 8px 12px;
     }
 
     .logo {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .menu-btn {
+        font-size: 22px;
     }
 
     .theme-btn {
         font-size: 17px;
-        margin-right: 8px;
+        margin-right: 6px;
     }
 
-    .menu-btn {
-        font-size: 23px;
-    }
+    /* HERO */
 
     .hero {
-        min-height: 70vh;
-        padding: 50px 16px;
+        width: 100%;
+        min-height: 68vh;
+        padding: 50px 15px;
+    }
+
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 
     .hero h1 {
-        font-size: 43px;
-        margin-bottom: 16px;
+        font-size: 40px;
+        line-height: 1;
     }
 
-    .hero-small {
-        font-size: 11px;
-    }
-
-    .hero-content > p:not(.hero-small) {
+    .description {
         font-size: 14px;
         line-height: 1.5;
     }
 
     .btn {
-        font-size: 13px;
-        padding: 11px 18px;
+        padding: 10px 17px;
+        font-size: 12px;
     }
 
+    /* PRESENTATION */
+
+    .presentation {
+        width: 100%;
+        padding: 50px 14px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .presentation-image {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .presentation-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .presentation-text h2 {
+        font-size: 25px;
+        line-height: 1.25;
+        margin: 10px 0 15px;
+    }
+
+    .presentation-text p {
+        font-size: 13px;
+    }
+
+    /* STATS */
+
+    .stats {
+        width: 100%;
+        padding: 35px 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+    }
+
+    .stat strong {
+        font-size: 29px;
+    }
+
+    .stat span {
+        font-size: 11px;
+    }
+
+    /* SECTIONS */
+
     .section {
-        padding: 55px 14px;
+        width: 100%;
+        padding: 50px 13px;
     }
 
     .section-title {
@@ -450,53 +630,54 @@ footer {
     }
 
     .section-title h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
-    .stats {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        padding: 38px 20px;
-    }
-
-    .stat strong {
-        font-size: 32px;
-    }
+    /* ÉQUIPES */
 
     .joueurs {
+        width: 100%;
         grid-template-columns: 1fr;
         gap: 14px;
     }
 
     .joueur {
-        padding: 22px 18px;
+        width: 100%;
+        padding: 21px 17px;
     }
 
     .joueur-info h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .joueur-info p {
-        font-size: 13px;
+        font-size: 12px;
+    }
+
+    /* MATCHS */
+
+    .matchs {
+        width: 100%;
     }
 
     .match {
-        grid-template-columns: 48px minmax(0, 1fr);
+        width: 100%;
+        grid-template-columns: 43px minmax(0, 1fr);
         gap: 8px;
-        padding: 14px 10px;
+        padding: 13px 9px;
     }
 
     .date strong {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .date span {
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .equipes {
-        gap: 5px;
-        font-size: 11px;
+        gap: 4px;
+        font-size: 9px;
     }
 
     .equipes span {
@@ -505,50 +686,75 @@ footer {
 
     .heure {
         grid-column: 1 / -1;
-        padding-top: 9px;
-        border-top: 1px solid rgba(255,255,255,.06);
-        font-size: 12px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        font-size: 11px;
     }
 
+    /* TROPHÉES */
+
     .trophees {
+        width: 100%;
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 13px;
     }
 
     .trophee {
         padding: 22px 15px;
     }
 
+    .trophee-icon {
+        font-size: 30px;
+    }
+
+    .trophee h3 {
+        font-size: 17px;
+    }
+
+    .trophee p {
+        font-size: 12px;
+    }
+
+    /* GALERIE */
+
+    .galerie {
+        width: 100%;
+        border-radius: 10px;
+    }
+
     footer {
-        font-size: 11px;
+        font-size: 10px;
+        padding: 23px 10px;
     }
 }
 
-/* ================= PETITS TÉLÉPHONES ================= */
+/* =========================================================
+   TRÈS PETIT TÉLÉPHONE
+========================================================= */
 
 @media (max-width: 380px) {
 
     .logo {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .hero h1 {
-        font-size: 37px;
+        font-size: 35px;
     }
 
-    .section-title h2 {
+    .presentation-text h2 {
         font-size: 23px;
     }
 
-    .joueur {
-        padding: 18px 15px;
+    .section-title h2 {
+        font-size: 22px;
     }
 
-    .match {
-        padding: 12px 8px;
+    .joueur-info h3 {
+        font-size: 18px;
     }
 
     .equipes {
-        font-size: 10px;
+        font-size: 8px;
     }
 }

@@ -1,409 +1,348 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    ```
     <title>MON ÉQUIPE - Football</title>
-
     <link rel="stylesheet" href="isma.css">
-    ```
-
 </head>
 
 <body>
 
-    ```
-    <!-- ================= NAVBAR ================= -->
+<header class="navbar">
 
-    <header>
-        <nav class="navbar">
+    <div class="logo">
+        ⚽ MON ÉQUIPE
+    </div>
 
-            <div class="logo">
-                ⚽ MON ÉQUIPE
-            </div>
+    <button id="menuBtn" class="menu-btn">☰</button>
 
-            <button class="menu-btn" id="menuBtn">
-                ☰
-            </button>
+    <nav id="menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#equipe">Équipes</a>
+        <a href="#matchs">Matchs</a>
+        <a href="#trophees">Trophées</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <ul class="menu" id="menu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#equipe">Équipe</a></li>
-                <li><a href="#matchs">Matchs</a></li>
-                <li><a href="#trophees">Trophées</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-            </ul>
+    <button id="themeBtn" class="theme-btn">🌙</button>
 
-            <button id="themeBtn" class="theme-btn">
-                🌙
-            </button>
+</header>
 
-        </nav>
-    </header>
 
+<section id="accueil" class="hero">
 
-    <!-- ================= ACCUEIL ================= -->
+    <div class="hero-content">
 
-    <section id="accueil" class="hero">
+        <p class="hero-small">BIENVENUE SUR</p>
 
-        <div class="hero-content">
+        <h1>MON ÉQUIPE</h1>
 
-            <p class="subtitle">
-                BIENVENUE CHEZ
-            </p>
+        <p>
+            La passion du football, l'esprit d'équipe
+            et la victoire.
+        </p>
 
-            <h1>
-                MON ÉQUIPE
-            </h1>
+        <a href="#equipe" class="btn">
+            Découvrir les équipes
+        </a>
 
-            <p class="description">
-                Une équipe, une passion, un objectif :
-                la victoire.
-            </p>
+    </div>
 
-            <a href="#equipe" class="btn">
-                Découvrir l'équipe
-            </a>
+</section>
 
-        </div>
 
-    </section>
+<section class="section presentation">
 
+    <div class="section-title">
+        <p>QUI SOMMES-NOUS ?</p>
+        <h2>Notre passion</h2>
+    </div>
 
-    <!-- ================= PRESENTATION ================= -->
+    <div class="presentation-content">
 
-    <section class="presentation">
+        <p>
+            MON ÉQUIPE est un espace dédié au football,
+            à la compétition et surtout à l'esprit d'équipe.
+        </p>
 
-        <div class="presentation-image">
+        <p>
+            Deux équipes s'affrontent dans un esprit
+            sportif et amical.
+        </p>
 
-            <img src="5906934506231370193.jpg" alt="Photo de MON ÉQUIPE">
+    </div>
 
-        </div>
+</section>
 
-        <div class="presentation-text">
 
-            <span>NOTRE CLUB</span>
+<section class="stats">
 
-            <h2>
-                Une équipe, une famille 26/27
-            </h2>
+    <div class="stat">
+        <strong class="counter" data-target="9">9</strong>
+        <span>Joueurs</span>
+    </div>
 
-            <p>
-                MON ÉQUIPE est un club de football créé
-                autour d'une passion commune pour le sport.
-            </p>
+    <div class="stat">
+        <strong class="counter" data-target="2">2</strong>
+        <span>Équipes</span>
+    </div>
 
-            <p>
-                Notre objectif est de progresser ensemble,
-                respecter nos adversaires et donner le
-                meilleur de nous-mêmes à chaque match.
-            </p>
+    <div class="stat">
+        <strong class="counter" data-target="3">3</strong>
+        <span>Matchs</span>
+    </div>
 
-            <a href="#equipe" class="btn">
-                Voir les joueurs
-            </a>
+</section>
 
-        </div>
 
-    </section>
+<section id="equipe" class="section">
 
+    <div class="section-title">
+        <p>NOS ÉQUIPES</p>
+        <h2>Les joueurs</h2>
+    </div>
 
-    <!-- ================= STATISTIQUES ================= -->
+    <div class="search-box">
 
-    <section class="stats">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 Rechercher un joueur..."
+        >
 
-        <div class="stat">
-            <strong class="counter" data-target="16">
-                16
-            </strong>
+    </div>
 
-            <span>
-                Joueurs
-            </span>
-        </div>
 
-        <div class="stat">
-            <strong class="counter" data-target="12">
-                0
-            </strong>
+    <div class="joueurs" id="joueurs">
 
-            <span>
-                Matchs
-            </span>
-        </div>
 
-        <div class="stat">
-            <strong class="counter" data-target="8">
-                0
-            </strong>
+        <!-- ================= ÉQUIPE CLAUDE ================= -->
 
-            <span>
-                Victoires
-            </span>
-        </div>
+        <div class="joueur">
 
-        <div class="stat">
-            <strong class="counter" data-target="32">
-                0
-            </strong>
+            <div class="joueur-info">
 
-            <span>
-                Buts
-            </span>
-        </div>
+                <span>ÉQUIPE CLAUDE</span>
 
-    </section>
-
-
-    <!-- ================= JOUEURS ================= -->
-
-    <section id="equipe" class="section">
-
-        <div class="section-title">
-
-            <p>NOTRE EFFECTIF</p>
-
-            <h2>
-                Les joueurs
-            </h2>
-
-        </div>
-
-
-        <!-- Recherche -->
-
-        <div class="search-box">
-
-            <input type="text" id="searchInput" placeholder="🔎 Rechercher un joueur...">
-
-        </div>
-
-
-        <div class="joueurs" id="joueurs">
-
-
-            <!-- JOUEUR 1 -->
-
-            <div class="joueur">
-
-                <div class="joueur-info">
-
-                    <span>
-                        #4
-                    </span>
-
-                    <h3>
-                        Équipe 1
-                    </h3>
-
-                    <p>
-                        1. HASSAN GARAN<br>
-                        2. ISMAEL<br>
-                        3. IBRAHIM<br>
-                        4. ABDOURAZAK
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- JOUEUR 2 -->
-
-            <div class="joueur">
-
-                <div class="joueur-info">
-
-                    <span>
-                        #4
-                    </span>
-
-                    <h3>
-                        Équipe 2
-                    </h3>
-
-                    <p>
-                        1. BOUKAR<br>
-                        2. AaRON<br>
-                        3. ALPHA<br>
-                        4. MILTON<br>
-                        5. BOUZOU
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- JOUEUR 3 -->
-
-            <div class="joueur">
-
-                <div class="joueur-info">
-
-                    <span>
-                        #7
-                    </span>
-
-                    <h3>
-                        Équipe 3
-                    </h3>
-
-                    <p>
-                        1. HASSAN<br>
-                        2. GRINVIS<br>
-                        3. ABEL<br>
-                        4. STORYI<br>
-                        5. MAHAMADE<br>
-                        6. JONA<br>
-                        7. MOUSSA (GR)
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= MATCHS ================= -->
-
-    <section id="matchs" class="section matchs-section">
-
-        <div class="section-title">
-
-            <p>CALENDRIER</p>
-
-            <h2>
-                Nos matchs
-            </h2>
-
-        </div>
-
-        <div class="matchs">
-
-            <div class="match">
-
-                <div class="date">
-                    <strong>01</strong>
-                    <span>OCT</span>
-                </div>
-
-                <div class="equipes">
-                    <span>MON ÉQUIPE</span>
-                    <b>VS</b>
-                    <span>ADVERSAIRE</span>
-                </div>
-
-                <div class="heure">
-                    16:00
-                </div>
-
-            </div>
-
-
-            <div class="match">
-
-                <div class="date">
-                    <strong>15</strong>
-                    <span>OCT</span>
-                </div>
-
-                <div class="equipes">
-                    <span>MON ÉQUIPE</span>
-                    <b>VS</b>
-                    <span>ADVERSAIRE</span>
-                </div>
-
-                <div class="heure">
-                    17:00
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= TROPHEES ================= -->
-
-    <section id="trophees" class="section">
-
-        <div class="section-title">
-
-            <p>NOS RÉCOMPENSES</p>
-
-            <h2>
-                Trophées
-            </h2>
-
-        </div>
-
-        <div class="trophees">
-
-            <div class="trophee">
-
-                <div class="trophee-icon">
-                    🏆
-                </div>
-
-                <h3>
-                    Champion
-                </h3>
+                <h3>Équipe Claude</h3>
 
                 <p>
-                    Notre objectif est de gagner ensemble.
-                </p>
-
-            </div>
-
-
-            <div class="trophee">
-
-                <div class="trophee-icon">
-                    🥇
-                </div>
-
-                <h3>
-                    Première place
-                </h3>
-
-                <p>
-                    Travail, discipline et passion.
-                </p>
-
-            </div>
-
-
-            <div class="trophee">
-
-                <div class="trophee-icon">
-                    ⚽
-                </div>
-
-                <h3>
-                    Esprit d'équipe
-                </h3>
-
-                <p>
-                    Une équipe, une famille.
+                    1. HASSAN GARAN<br>
+                    2. ISMAEL<br>
+                    3. IBRAHIM<br>
+                    4. ABDOURAZAK
                 </p>
 
             </div>
 
         </div>
 
-    </section>
+
+        <!-- ================= ÉQUIPE CHATGPT ================= -->
+
+        <div class="joueur">
+
+            <div class="joueur-info">
+
+                <span>ÉQUIPE CHATGPT</span>
+
+                <h3>Équipe ChatGPT</h3>
+
+                <p>
+                    1. BOUKAR<br>
+                    2. AaRON<br>
+                    3. ALPHA<br>
+                    4. MILTON<br>
+                    5. BOUZOU
+                </p>
+
+            </div>
+
+        </div>
 
 
-    <!-- ================= GALERIE ================= -->
+    </div>
 
-    <section id="galerie" class ```
+</section>
+
+
+<!-- ================= CALENDRIER ================= -->
+
+<section id="matchs" class="section matchs-section">
+
+    <div class="section-title">
+
+        <p>CALENDRIER</p>
+
+        <h2>Nos matchs</h2>
+
+    </div>
+
+
+    <div class="matchs">
+
+
+        <!-- MATCH 1 -->
+
+        <div class="match">
+
+            <div class="date">
+                <strong>01</strong>
+                <span>OCT</span>
+            </div>
+
+            <div class="equipes">
+
+                <span>ÉQUIPE CLAUDE</span>
+
+                <b>VS</b>
+
+                <span>ÉQUIPE CHATGPT</span>
+
+            </div>
+
+            <div class="heure">
+                16:00
+            </div>
+
+        </div>
+
+
+        <!-- MATCH 2 -->
+
+        <div class="match">
+
+            <div class="date">
+                <strong>15</strong>
+                <span>OCT</span>
+            </div>
+
+            <div class="equipes">
+
+                <span>ÉQUIPE CHATGPT</span>
+
+                <b>VS</b>
+
+                <span>ÉQUIPE CLAUDE</span>
+
+            </div>
+
+            <div class="heure">
+                17:00
+            </div>
+
+        </div>
+
+
+        <!-- MATCH 3 -->
+
+        <div class="match">
+
+            <div class="date">
+                <strong>29</strong>
+                <span>OCT</span>
+            </div>
+
+            <div class="equipes">
+
+                <span>ÉQUIPE CLAUDE</span>
+
+                <b>VS</b>
+
+                <span>ÉQUIPE CHATGPT</span>
+
+            </div>
+
+            <div class="heure">
+                16:30
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section id="trophees" class="section">
+
+    <div class="section-title">
+        <p>NOS RÉCOMPENSES</p>
+        <h2>Trophées</h2>
+    </div>
+
+    <div class="trophees">
+
+        <div class="trophee">
+            🏆
+            <h3>Champion</h3>
+            <p>Une équipe, une victoire.</p>
+        </div>
+
+        <div class="trophee">
+            🥇
+            <h3>Meilleur joueur</h3>
+            <p>Récompense individuelle.</p>
+        </div>
+
+        <div class="trophee">
+            ⚽
+            <h3>Fair-play</h3>
+            <p>Le respect avant tout.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="galerie" class="section">
+
+    <div class="section-title">
+        <p>NOS MOMENTS</p>
+        <h2>Galerie</h2>
+    </div>
+
+    <div class="galerie">
+
+        <img
+            src="5906934506231370193.jpg"
+            alt="Photo de l'équipe"
+        >
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="section contact">
+
+    <div class="section-title">
+        <p>CONTACT</p>
+        <h2>Contactez-nous</h2>
+    </div>
+
+    <p>
+        Pour toute information concernant les équipes
+        et les matchs, contactez-nous.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 MON ÉQUIPE - Tous droits réservés
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

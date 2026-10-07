@@ -6,357 +6,233 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background: #08110d;
     color: white;
     line-height: 1.6;
-    transition: 0.3s;
 }
 
+/* ================= NAVBAR ================= */
 
-/* =====================================
-   NAVBAR
-===================================== */
-
-header {
-    background: #050c08;
+.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-
-    padding: 18px 30px;
-
+    width: 100%;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 5%;
+    background: rgba(5, 12, 8, 0.97);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
     color: #31d47f;
+    font-size: 19px;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-.menu {
+.navbar nav {
     display: flex;
-    gap: 30px;
-    list-style: none;
+    align-items: center;
+    gap: 22px;
 }
 
-.menu a {
+.navbar nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    font-size: 14px;
 }
 
-.menu a:hover {
-    color: #31d47f;
-}
-
-
-/* Boutons navbar */
-
-.menu-btn,
-.theme-btn {
-    border: none;
+.theme-btn,
+.menu-btn {
+    border: 0;
     background: transparent;
     color: white;
-    font-size: 25px;
     cursor: pointer;
+}
+
+.theme-btn {
+    font-size: 19px;
 }
 
 .menu-btn {
     display: none;
+    font-size: 25px;
 }
 
-
-/* =====================================
-   HERO
-===================================== */
+/* ================= HERO ================= */
 
 .hero {
-    min-height: 90vh;
-
+    width: 100%;
+    min-height: 75vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
     text-align: center;
-
-    padding: 30px;
-
+    padding: 60px 20px;
     background:
-        linear-gradient(rgba(0, 0, 0, .7),
-            rgba(0, 0, 0, .8)),
-        url("images/equipe.jpg") center / cover;
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.75)),
+        url("5906934506231370193.jpg") center / cover no-repeat;
 }
 
 .hero-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 700px;
 }
 
-.subtitle {
+.hero-small {
     color: #31d47f;
+    font-size: 13px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .hero h1 {
-    font-size: clamp(55px, 10vw, 110px);
+    font-size: clamp(42px, 9vw, 80px);
     line-height: 1;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-.description {
-    font-size: 20px;
+.hero-content > p:not(.hero-small) {
     color: #ddd;
-    margin-bottom: 35px;
+    font-size: 17px;
+    margin-bottom: 25px;
 }
-
-
-/* =====================================
-   BOUTON
-===================================== */
 
 .btn {
     display: inline-block;
-
-    padding: 14px 30px;
-
+    max-width: 100%;
     background: #31d47f;
-    color: #06100b;
-
+    color: #041008;
+    padding: 12px 22px;
+    border-radius: 30px;
     text-decoration: none;
-
-    border-radius: 6px;
-
     font-weight: bold;
-
-    transition: .3s;
 }
 
-.btn:hover {
-    transform: translateY(-4px);
-    background: white;
-}
-
-
-/* =====================================
-   PRESENTATION
-===================================== */
-
-.presentation {
-    max-width: 1200px;
-    margin: auto;
-
-    padding: 100px 30px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.presentation-image img {
-    width: 100%;
-    height: 450px;
-
-    object-fit: cover;
-
-    border-radius: 15px;
-}
-
-.presentation-text span {
-    color: #31d47f;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.presentation-text h2 {
-    font-size: 45px;
-    margin: 15px 0;
-}
-
-.presentation-text p {
-    color: #bbb;
-    margin-bottom: 18px;
-}
-
-
-/* =====================================
-   SECTIONS
-===================================== */
+/* ================= SECTIONS ================= */
 
 .section {
-    max-width: 1200px;
-    margin: auto;
-
-    padding: 100px 30px;
+    width: 100%;
+    padding: 75px 6%;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .section-title p {
     color: #31d47f;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
 }
 
 .section-title h2 {
-    font-size: 45px;
+    font-size: 34px;
+    line-height: 1.2;
 }
 
+/* ================= PRESENTATION ================= */
 
-/* =====================================
-   RECHERCHE
-===================================== */
-
-.search-box {
+.presentation-content {
+    max-width: 750px;
+    margin: auto;
     text-align: center;
-    margin-bottom: 40px;
+    color: #ccc;
 }
 
-.search-box input {
-    width: 100%;
-    max-width: 500px;
-
-    padding: 15px 20px;
-
-    border: none;
-    border-radius: 30px;
-
-    font-size: 16px;
-
-    outline: none;
-}
-
-
-/* =====================================
-   JOUEURS
-===================================== */
-
-.joueurs {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 25px;
-}
-
-.joueur {
-    background: #101c16;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    transition: .3s;
-}
-
-.joueur:hover {
-    transform: translateY(-10px);
-}
-
-.joueur img {
-    width: 100%;
-    height: 330px;
-
-    object-fit: cover;
-
-    cursor: pointer;
-}
-
-.joueur-info {
-    padding: 20px;
-}
-
-.joueur-info span {
-    color: #31d47f;
-    font-weight: bold;
-}
-
-.joueur-info h3 {
-    font-size: 25px;
-}
-
-.joueur-info p {
-    color: #999;
-}
-
-
-/* =====================================
-   STATISTIQUES
-===================================== */
+/* ================= STATS ================= */
 
 .stats {
-    background: #31d47f;
-    color: #06100b;
-
+    width: 100%;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 45px 6%;
+    background: #050c08;
+}
 
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    padding: 60px 30px;
-
+.stat {
     text-align: center;
 }
 
 .stat strong {
     display: block;
-    font-size: 50px;
+    color: #31d47f;
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 8px;
 }
 
-.stat span {
+/* ================= EQUIPES ================= */
+
+.joueurs {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.joueur {
+    width: 100%;
+    background: #101c16;
+    border: 1px solid rgba(49,212,127,.15);
+    border-radius: 15px;
+    padding: 28px;
+}
+
+.joueur-info span {
+    color: #31d47f;
+    font-size: 12px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
-
-/* =====================================
-   MATCHS
-===================================== */
-
-.matchs-section {
-    max-width: 1000px;
+.joueur-info h3 {
+    font-size: 23px;
+    margin: 8px 0;
 }
+
+.joueur-info p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* ================= MATCHS ================= */
 
 .matchs {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
 }
 
 .match {
-    background: #101c16;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
+    width: 100%;
     display: grid;
-
-    grid-template-columns:
-        100px 1fr 100px;
-
+    grid-template-columns: 65px minmax(0, 1fr) 60px;
     align-items: center;
+    gap: 12px;
+    background: #101c16;
+    border: 1px solid rgba(49,212,127,.12);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 14px;
 }
 
 .date {
@@ -365,332 +241,314 @@ header {
 
 .date strong {
     display: block;
-
-    font-size: 35px;
-
+    font-size: 24px;
     color: #31d47f;
 }
 
 .date span {
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .equipes {
+    min-width: 0;
     display: flex;
-
-    justify-content: center;
     align-items: center;
-
-    gap: 25px;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .equipes span {
+    max-width: 42%;
+    overflow-wrap: break-word;
+}
+
+.equipes b {
+    color: #31d47f;
+    flex-shrink: 0;
+}
+
+.heure {
+    text-align: center;
     color: #31d47f;
     font-weight: bold;
 }
 
-.heure {
-    text-align: right;
-    color: #aaa;
-}
-
-
-/* =====================================
-   TROPHEES
-===================================== */
+/* ================= TROPHÉES ================= */
 
 .trophees {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
 .trophee {
     background: #101c16;
-
-    padding: 40px 20px;
-
+    border: 1px solid rgba(49,212,127,.12);
+    border-radius: 15px;
+    padding: 25px 18px;
     text-align: center;
-
-    border-radius: 12px;
 }
 
 .trophee-icon {
-    font-size: 60px;
+    font-size: 35px;
+    margin-bottom: 10px;
 }
 
-.trophee h3 {
-    font-size: 22px;
-}
-
-.trophee p {
-    color: #999;
-}
-
-
-/* =====================================
-   GALERIE
-===================================== */
+/* ================= GALERIE ================= */
 
 .galerie {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 15px;
-}
-
-.gallery-image {
     width: 100%;
-    height: 250px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    transition: .3s;
+    max-width: 850px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
-.gallery-image:hover {
-    transform: scale(1.04);
-}
-
-
-/* =====================================
-   MODAL
-===================================== */
-
-.modal {
-    display: none;
-
-    position: fixed;
-
-    z-index: 2000;
-
-    left: 0;
-    top: 0;
-
+.galerie img {
+    display: block;
     width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, .9);
-
-    justify-content: center;
-    align-items: center;
+    height: auto;
 }
 
-.modal.active {
-    display: flex;
-}
-
-.modal img {
-    max-width: 90%;
-    max-height: 85%;
-
-    border-radius: 10px;
-}
-
-.close {
-    position: absolute;
-
-    top: 20px;
-    right: 35px;
-
-    font-size: 50px;
-
-    cursor: pointer;
-}
-
-
-/* =====================================
-   CONTACT
-===================================== */
+/* ================= CONTACT ================= */
 
 .contact {
-    background: #31d47f;
-
-    color: #06100b;
-
-    padding: 80px 30px;
-
-    display: flex;
-
-    justify-content: space-around;
-
-    align-items: center;
-
-    gap: 30px;
+    text-align: center;
 }
 
-.contact h2 {
-    font-size: 45px;
+.contact > p {
+    max-width: 600px;
+    margin: auto;
+    color: #bbb;
 }
 
-
-/* =====================================
-   FOOTER
-===================================== */
+/* ================= FOOTER ================= */
 
 footer {
-    background: #040907;
-
+    width: 100%;
+    padding: 25px 15px;
     text-align: center;
-
-    padding: 30px;
-
-    color: #777;
+    background: #050c08;
+    color: #888;
+    font-size: 12px;
 }
 
-
-/* =====================================
-   MODE CLAIR
-===================================== */
-
-body.light {
-    background: #f3f5f4;
-    color: #111;
-}
-
-body.light header {
-    background: white;
-}
-
-body.light .menu a {
-    color: #111;
-}
-
-body.light .theme-btn {
-    color: #111;
-}
-
-body.light .joueur,
-body.light .match,
-body.light .trophee {
-    background: white;
-}
-
-body.light .presentation-text p {
-    color: #555;
-}
-
-
-/* =====================================
-   RESPONSIVE
-===================================== */
+/* ================= TABLETTE ================= */
 
 @media (max-width: 900px) {
 
+    .navbar {
+        padding: 12px 18px;
+    }
+
     .menu-btn {
         display: block;
+        order: 2;
     }
 
-    .menu {
+    .theme-btn {
+        order: 1;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .navbar nav {
         display: none;
-
         position: absolute;
-
-        top: 70px;
+        top: 100%;
         left: 0;
-
+        right: 0;
         width: 100%;
-
-        background: #050c08;
-
         flex-direction: column;
-
-        text-align: center;
-
-        padding: 20px;
+        gap: 0;
+        background: #050c08;
     }
 
-    .menu.active {
+    .navbar nav.active {
         display: flex;
     }
 
-    .presentation {
-        grid-template-columns: 1fr;
+    .navbar nav a {
+        width: 100%;
+        padding: 14px 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.06);
     }
 
     .joueurs {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .galerie {
-        grid-template-columns: repeat(2, 1fr);
+    .trophees {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
+/* ================= TÉLÉPHONE ================= */
 
 @media (max-width: 600px) {
 
     .navbar {
-        padding: 15px;
+        min-height: 56px;
+        padding: 10px 14px;
     }
 
     .logo {
-        font-size: 18px;
+        font-size: 15px;
+    }
+
+    .theme-btn {
+        font-size: 17px;
+        margin-right: 8px;
+    }
+
+    .menu-btn {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 50px 16px;
     }
 
     .hero h1 {
-        font-size: 55px;
+        font-size: 43px;
+        margin-bottom: 16px;
     }
 
-    .presentation {
-        padding: 70px 20px;
+    .hero-small {
+        font-size: 11px;
     }
 
-    .presentation-text h2 {
-        font-size: 35px;
+    .hero-content > p:not(.hero-small) {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 11px 18px;
     }
 
     .section {
-        padding: 70px 20px;
+        padding: 55px 14px;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+    }
+
+    .section-title p {
+        font-size: 10px;
+        letter-spacing: 1.5px;
     }
 
     .section-title h2 {
-        font-size: 35px;
+        font-size: 26px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 38px 20px;
+    }
+
+    .stat strong {
+        font-size: 32px;
     }
 
     .joueurs {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
 
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+    .joueur {
+        padding: 22px 18px;
+    }
+
+    .joueur-info h3 {
+        font-size: 20px;
+    }
+
+    .joueur-info p {
+        font-size: 13px;
     }
 
     .match {
-        grid-template-columns: 70px 1fr;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 8px;
+        padding: 14px 10px;
     }
 
-    .heure {
-        display: none;
+    .date strong {
+        font-size: 20px;
+    }
+
+    .date span {
+        font-size: 9px;
     }
 
     .equipes {
-        font-size: 13px;
-        gap: 10px;
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .equipes span {
+        max-width: 40%;
+    }
+
+    .heure {
+        grid-column: 1 / -1;
+        padding-top: 9px;
+        border-top: 1px solid rgba(255,255,255,.06);
+        font-size: 12px;
     }
 
     .trophees {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
 
-    .galerie {
-        grid-template-columns: 1fr;
+    .trophee {
+        padding: 22px 15px;
     }
 
-    .contact {
-        flex-direction: column;
-        text-align: center;
+    footer {
+        font-size: 11px;
+    }
+}
+
+/* ================= PETITS TÉLÉPHONES ================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 14px;
     }
 
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+
+    .joueur {
+        padding: 18px 15px;
+    }
+
+    .match {
+        padding: 12px 8px;
+    }
+
+    .equipes {
+        font-size: 10px;
+    }
 }

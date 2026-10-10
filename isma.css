@@ -1,0 +1,590 @@
+/* =====================================================
+   MON ÉQUIPE — CSS RESPONSIVE
+   Téléphone / Tablette / Ordinateur
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08110d;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 58px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #050c08;
+    border-bottom: 1px solid rgba(49, 212, 127, 0.15);
+}
+
+.logo {
+    color: #31d47f;
+    font-size: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #31d47f;
+}
+
+.menu-btn,
+.theme-btn {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+}
+
+.theme-btn {
+    font-size: 18px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    width: 100%;
+    min-height: 70vh;
+    padding: 60px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.78)),
+        url("5906934506231370193.jpg") center center / cover no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 700px;
+}
+
+.hero-small {
+    color: #31d47f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 10vw, 80px);
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.hero-content>p:not(.hero-small) {
+    color: #dddddd;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 19px;
+    border-radius: 30px;
+    background: #31d47f;
+    color: #041008;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+    width: 100%;
+    padding: 60px 16px;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title p {
+    color: #31d47f;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 7px;
+}
+
+.section-title h2 {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+/* =====================================================
+   PRESENTATION
+===================================================== */
+
+.presentation-content {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* =====================================================
+   STATISTIQUES
+===================================================== */
+
+.stats {
+    width: 100%;
+    padding: 38px 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: #050c08;
+}
+
+.stat {
+    min-width: 0;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    color: #31d47f;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat span {
+    font-size: 12px;
+}
+
+/* =====================================================
+   CHOIX DES JOUEURS / ÉQUIPES
+===================================================== */
+
+.joueurs {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.joueur {
+    width: 100%;
+    min-width: 0;
+    padding: 24px 20px;
+    background: #101c16;
+    border: 1px solid rgba(49, 212, 127, 0.15);
+    border-radius: 14px;
+}
+
+.joueur-info {
+    width: 100%;
+}
+
+.joueur-info span {
+    color: #31d47f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.joueur-info h3 {
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+.joueur-info p {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+/* =====================================================
+   MATCHS
+===================================================== */
+
+.matchs {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.match {
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 55px;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 12px;
+    margin-bottom: 12px;
+    background: #101c16;
+    border: 1px solid rgba(49, 212, 127, 0.12);
+    border-radius: 13px;
+}
+
+.date {
+    text-align: center;
+}
+
+.date strong {
+    display: block;
+    color: #31d47f;
+    font-size: 21px;
+}
+
+.date span {
+    font-size: 9px;
+}
+
+.equipes {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.equipes span {
+    max-width: 42%;
+    overflow-wrap: anywhere;
+}
+
+.equipes b {
+    flex-shrink: 0;
+    color: #31d47f;
+}
+
+.heure {
+    text-align: center;
+    color: #31d47f;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   TROPHÉES
+===================================================== */
+
+.trophees {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.trophee {
+    min-width: 0;
+    padding: 22px 15px;
+    text-align: center;
+    background: #101c16;
+    border: 1px solid rgba(49, 212, 127, 0.12);
+    border-radius: 14px;
+}
+
+.trophee-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.trophee h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.trophee p {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+/* =====================================================
+   GALERIE
+===================================================== */
+
+.galerie {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.galerie img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    text-align: center;
+}
+
+.contact>p {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    width: 100%;
+    padding: 25px 15px;
+    text-align: center;
+    background: #050c08;
+    color: #888888;
+    font-size: 11px;
+}
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 10px 16px;
+    }
+
+    .menu-btn {
+        display: block;
+        order: 3;
+    }
+
+    .theme-btn {
+        margin-left: auto;
+        margin-right: 12px;
+        order: 2;
+    }
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: #050c08;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .navbar nav a {
+        width: 100%;
+        padding: 14px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+}
+
+/* =====================================================
+   VRAI MODE TÉLÉPHONE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        height: 56px;
+        min-height: 56px;
+        padding: 8px 13px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .menu-btn {
+        font-size: 22px;
+    }
+
+    .theme-btn {
+        font-size: 17px;
+        margin-right: 7px;
+    }
+
+    .hero {
+        min-height: 68vh;
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content>p:not(.hero-small) {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .section {
+        padding: 50px 13px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 35px 15px;
+    }
+
+    .stat strong {
+        font-size: 29px;
+    }
+
+    /* UNE SEULE CARTE PAR LIGNE */
+    .joueurs {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .joueur {
+        padding: 20px 17px;
+    }
+
+    .joueur-info h3 {
+        font-size: 19px;
+    }
+
+    /* MATCH SUR PETIT ÉCRAN */
+    .match {
+        grid-template-columns: 45px minmax(0, 1fr);
+        gap: 8px;
+        padding: 13px 9px;
+    }
+
+    .equipes {
+        font-size: 10px;
+        gap: 4px;
+    }
+
+    .equipes span {
+        max-width: 40%;
+    }
+
+    .heure {
+        grid-column: 1 / -1;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* UNE SEULE CARTE PAR LIGNE */
+    .trophees {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .trophee {
+        padding: 20px 15px;
+    }
+}
+
+/* =====================================================
+   TRÈS PETIT TÉLÉPHONE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-small {
+        font-size: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+    .joueur-info h3 {
+        font-size: 18px;
+    }
+
+    .equipes {
+        font-size: 9px;
+    }
+}

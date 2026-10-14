@@ -1,390 +1,252 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MON ÉQUIPE - Football</title>
-    <link rel="stylesheet" href="isma.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACGSCGRA — Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                ⚽ MON ÉQUIPE
-            </div>
+<div class="official-banner" role="img" aria-label="République du Niger — Ministère de la Justice et des Droits de l'Homme, Ministère de l'Économie et des Finances — ACGSCGRA"></div>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
-                ☰
-            </button>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">ACGSCGRA</a>
+    <nav class="nav">
+      <a href="#organigramme">Organigramme</a>
+      <a href="#documents">Documents</a>
+      <a href="#contact" class="nav-cta">Nous contacter</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-            <ul class="menu" id="menu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#equipe">Équipe</a></li>
-                <li><a href="#matchs">Matchs</a></li>
-                <li><a href="#trophees">Trophées</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-            </ul>
+<section class="documents" id="documents">
+  <div class="wrap">
+    <p class="eyebrow">Documents officiels</p>
+    <h2>Textes de référence</h2>
 
-            <button id="themeBtn" class="theme-btn" aria-label="Changer le thème">
-                🌙
-            </button>
-        </nav>
-    </header>
+    <div class="doc-cards">
+      <div class="doc-card">
+        <h3>Statuts de l'Agence</h3>
+        <p>Annexe au décret n° 2017-705/PRN/MJ du 14 août 2017, portant approbation des statuts de l'ACGSCGRA.</p>
+        <button type="button" class="btn btn-primary" onclick="toggleDoc('statuts')">
+          Voir le texte des statuts
+        </button>
+        <div id="doc-statuts" class="doc-text" style="display:none;">
+          <p class="doc-text-title">Annexe au décret n° 2017-705/PRN/MJ du 14 août 2017, portant approbation des statuts de l'Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs</p>
 
-    <!-- ================= ACCUEIL ================= -->
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <p class="subtitle">
-                BIENVENUE CHEZ
-            </p>
+          <h4>Chapitre premier : Des missions de l'Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs</h4>
 
-            <h1>
-                MON ÉQUIPE
-            </h1>
+          <p><strong>Article premier :</strong> L'Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs est la structure nationale de gestion des biens, quelle que soit leur nature, saisis, confisqués, gelés et recouvrés, dans le cadre des procédures pénales. A ce titre l'Agence Centrale est chargée de :</p>
+          <ul>
+            <li>la gestion de tous les biens, quelle que soit leur nature, saisis, confisqués, gelés ou faisant l'objet d'une mesure conservatoire au cours d'une procédure pénale, qui lui sont confiés et qui nécessitent pour leur conservation ou leur valorisation des actes d'administration, conformément aux dispositions des articles 649.79 à 649.129 du code de procédure pénale ;</li>
+            <li>la gestion centralisée de toutes les sommes saisies lors des procédures pénales ;</li>
+            <li>la gestion des avoirs recouvrés lors des procédures pénales ;</li>
+            <li>la gestion centralisée et informatisée de toutes les données relatives aux missions de l'Agence ;</li>
+            <li>l'aliénation des biens saisis, sur autorisation du parquet ou des juges d'instruction, et la gestion particulière des biens, en concertation avec le parquet ou le juge d'instruction ;</li>
+            <li>la coordination de l'exécution des jugements et arrêts emportant confiscation spéciale des biens et la fourniture, à la demande du parquet, d'une assistance en ce qui concerne les dossiers y afférents ;</li>
+            <li>la fourniture des informations thématiques d'ordre général aux parquets et aux services de police judiciaire ;</li>
+            <li>la fourniture d'une assistance dans le cadre de l'entraide judiciaire internationale en ce qui concerne les saisies, les confiscations, les gels et les recouvrements des avoirs en liaison avec le Bureau de Coopération Judiciaire et d'Entraide Pénale International ;</li>
+            <li>l'établissement, l'entretien des rapports de service et le développement des accords de coopération avec des institutions équivalentes à l'étranger, sous réserve de l'application des dispositions conventionnelles et légales ;</li>
+            <li>la formulation des avis, d'office ou à la demande du Ministre de la Justice, sur la règlementation à élaborer et la politique pénale à définir en matière de saisies, de confiscations, de gels et de recouvrements des avoirs ;</li>
+            <li>la veille de l'exécution de la politique pénale par les parquets, les services de police judiciaire et les services du Ministère de la Justice, chargés de l'exécution des jugements de condamnation emportant confiscation spéciale des biens, se trouvant hors du territoire national et de leur application par les juges d'instruction et le directeur des affaires domaniales et cadastrales.</li>
+          </ul>
 
-            <p class="description">
-                Une équipe, une passion, un objectif :
-                la victoire.
-            </p>
+          <h4>Chapitre II : De l'organisation de l'Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs</h4>
 
-            <a href="#equipe" class="btn">
-                Découvrir l'équipe
-            </a>
+          <p><strong>Article 2 :</strong> L'agence Centrale est administrée par un Conseil d'Administration composé de onze (11) membres et dirigée par un Directeur Général assisté par un Secrétaire Général.</p>
+          <p>Le Conseil d'Administration de l'Agence comprend :</p>
+          <ul>
+            <li>le Secrétaire Général du Ministère de la Justice ;</li>
+            <li>le Directeur Général des Affaires Judiciaires du Ministère de la Justice ;</li>
+            <li>le Directeur Général de la Police Nationale ;</li>
+            <li>le Haut-Commandant de la Gendarmerie Nationale ;</li>
+            <li>le Directeur Général du Trésor et de la Comptabilité Publique ;</li>
+            <li>le Directeur Général des Douanes ;</li>
+            <li>le Directeur Général de l'Agence Judiciaire de l'Etat ;</li>
+            <li>quatre personnalités qualifiées en raison de leurs compétences en matière de droit des obligations, de droit des sociétés, de gestion de patrimoine et de marchés publics. Deux de ces personnalités sont désignées par le Ministre de la Justice, et les deux autres sont proposées par le Ministre des Finances.</li>
+          </ul>
+          <p>Les sept (7) premiers membres du Conseil d'Administration mentionnés peuvent se faire représenter.</p>
+          <p>Le président du Conseil d'Administration est choisi parmi les membres du Conseil et nommé par décret pris en Conseil des Ministres.</p>
+          <p>En cas de vacance pour quelque cause que ce soit du siège d'un membre du Conseil, il est pourvu à son remplacement, dans les mêmes conditions de nomination, pour la durée du mandat restant à courir si cette vacance survient plus de six mois avant le terme normal de celui-ci.</p>
+          <p>Les administrateurs perçoivent des jetons de présence dont le montant est fixé par le Conseil d'Administration conformément à la réglementation en vigueur. Les administrateurs peuvent percevoir des frais de déplacement et de séjour, dans les conditions prévues par la réglementation applicable aux fonctionnaires civils de l'Etat.</p>
+          <p>La fin des fonctions d'administrateur peut résulter de l'expiration du mandat, du décès, de la démission ou de la révocation individuelle ou collective décidée par le Ministre de la Justice.</p>
+
+          <p><strong>Article 3 :</strong> Le Conseil d'Administration se réunit au moins trois fois par an, sur convocation de son Président.</p>
+          <p>Le Président fixe l'ordre du jour sur proposition du Directeur Général.</p>
+          <p>L'ordre du jour est porté à la connaissance des membres du Conseil d'Administration au moins quinze jours avant la date de réunion.</p>
+          <p>Le Conseil d'Administration est réuni de plein droit, à la demande des Ministres de tutelle ou de la majorité de ses membres, sur les points de l'ordre du jour déterminés par eux, dans le délai de quinze jours suivant la demande.</p>
+          <p>Le Conseil d'Administration ne peut valablement délibérer que si la moitié au moins de ses membres ou de leurs représentants est présente.</p>
+          <p>Si le quorum n'est pas atteint, le Conseil est à nouveau convoqué sur le même ordre du jour dans un délai maximum d'un mois. Il délibère alors sans condition de quorum.</p>
+          <p>Les délibérations sont adoptées à la majorité des voix des membres présents ou représentés.</p>
+          <p>La voix du Président est prépondérante en cas de partage égal des voix.</p>
+          <p>Le Directeur Général de l'Agence, le Secrétaire Général, l'autorité chargée du contrôle financier et l'agent comptable assistent aux réunions du Conseil d'Administration avec voix consultative.</p>
+          <p>Le Président peut appeler à participer aux séances du Conseil d'Administration, avec voix consultative, toute personne dont il juge la présence utile.</p>
+
+          <p><strong>Article 4 :</strong> Le Conseil d'Administration règle par ses délibérations les affaires de l'établissement. Il délibère notamment sur :</p>
+          <ol>
+            <li>les programmes généraux d'activités de l'établissement public ;</li>
+            <li>les conditions générales de passation des contrats, des conventions et des marchés de l'établissement, ainsi que les délégations de service public et contrats d'objectifs à conclure avec l'Etat ;</li>
+            <li>le budget de l'établissement public et ses remaniements, le compte financier et l'affectation des résultats ;</li>
+            <li>les conditions générales de recrutement et d'emploi ;</li>
+            <li>l'autorisation d'engager des actions en justice, de négocier et conclure les transactions ;</li>
+            <li>l'organisation générale de l'établissement ;</li>
+            <li>le règlement intérieur de l'établissement ;</li>
+            <li>les rapports semestriels et le rapport annuel d'activités de l'établissement.</li>
+          </ol>
+          <p>Le Conseil d'Administration peut déléguer au Directeur Général certaines des compétences prévues au présent article, à l'exception des matières mentionnées aux points 2, 3, 7 et 8, dans les limites fixées par le règlement intérieur.</p>
+          <p>Les délibérations du Conseil d'Administration ne deviennent définitives qu'après approbation conjointe du Ministre de la Justice et du Ministre des Finances et ce, conformément à la réglementation en vigueur.</p>
+
+          <p><strong>Article 5 :</strong> L'Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs est dirigée par un Directeur Général. Il est nommé pour un mandat de trois (3) ans renouvelable une fois, par décret pris en Conseil des Ministres sur proposition du Ministre de la Justice, après appel à candidatures.</p>
+          <p>Il est assisté par un Secrétaire Général nommé pour un mandat de trois (3) ans renouvelable une fois, par décret pris en Conseil des Ministres sur proposition du Ministre des Finances.</p>
+          <p>Le Directeur Général, assisté par le Secrétaire Général, assure la gestion et la conduite générale de l'Agence.</p>
+          <p>Il représente l'Agence centrale en justice et dans tous les actes de la vie civile.</p>
+          <p>Il est ordonnateur des recettes et des dépenses de l'agence.</p>
+          <p>Il recrute le personnel placé sous son autorité.</p>
+          <p>Il passe les actes, contrats ou marchés et conclut les transactions nécessaires au bon fonctionnement de l'Agence, sous réserve des attributions confiées au Conseil d'Administration par l'article 4 du présent décret.</p>
+          <p>Il prépare les séances du Conseil d'Administration, élabore le budget de l'établissement public et exécute les délibérations du Conseil. Il lui rend compte, à chaque réunion, de l'activité de l'Agence et des décisions prises sur le fondement des délégations qu'il a reçues. Il peut déléguer certaines de ses fonctions au Secrétaire Général de l'Agence.</p>
+          <p>Il peut déléguer sa signature à tout agent de l'établissement public exerçant des fonctions d'encadrement, et ce dans des domaines qu'il détermine.</p>
+          <p>Il peut nommer des ordonnateurs secondaires.</p>
+          <p>Il est mis fin à ses fonctions, par décret pris en Conseil des Ministres sur proposition du Ministre de la Justice.</p>
+
+          <p><strong>Article 6 :</strong> L'Agence Centrale peut accueillir en détachement ou par voie de mise à disposition des agents relevant de la fonction publique de l'Etat et de la fonction publique territoriale, ainsi que des agents relevant d'organismes publics ou privés assurant la gestion d'un service public, dans le cadre de la réglementation qui leur est applicable.</p>
+          <p>Ils sont nommés pour un mandat de trois (3) ans renouvelable.</p>
+          <p>L'Agence est assistée dans ses missions par des correspondants dans les services de la police, de la gendarmerie et de la garde nationale, ainsi que dans les services de l'administration des Finances.</p>
+
+          <h4>Chapitre III : Des modalités de fonctionnement de l'Agence Centrale de Gestion des Saisies, des Confiscations, des Gels et des Recouvrements d'Avoirs</h4>
+
+          <p><strong>Article 7 :</strong> Avant d'entrer en fonction, les personnels de l'Agence Centrale prêtent le serment suivant, devant la Cour d'appel de Niamey : « Je jure de remplir fidèlement et loyalement ma mission avec honneur, dignité et probité et de garder en tout lieu et en toute circonstance le secret des informations qui seront communiquées à l'Agence par les autorités judiciaires, les services de police judiciaire et l'administration des Finances, ainsi que celles provenant des agences homologues ».</p>
+          <p>En cas de manquement grave par un des membres de l'Agence à ses obligations, le Directeur Général en réfère aux autorités de tutelle, à toutes fins utiles.</p>
+
+          <p><strong>Article 8 :</strong> Les procédures administratives, financières et comptables sont précisées dans un manuel de procédures.</p>
+
+          <p><strong>Article 9 :</strong> Les dépenses de l'établissement comprennent les frais de personnel autres que ceux pris en charge par leur organisme ou administration d'origine, les frais de fonctionnement et d'équipement, les frais de gestion, de recouvrement et de cession des avoirs saisis ou confisqués qui lui sont confiés et, d'une manière générale, toute dépense nécessaire à l'activité de l'établissement.</p>
+
+          <p><strong>Article 10 :</strong> Le contrôle financier et les opérations financières et comptables de l'Agence sont effectués conformément aux dispositions relatives au règlement général de la comptabilité publique.</p>
+          <p>L'agent comptable de l'établissement est nommé par arrêté conjoint des Ministres de la Justice et des Finances.</p>
+          <p>Des comptables secondaires peuvent être désignés par l'agent comptable, après avis du Directeur Général et avec l'accord du Ministre des Finances.</p>
+
+          <p><strong>Article 11 :</strong> Les fonds de l'Etablissement sont déposés au Trésor public.</p>
+          <p>Toutefois, les sommes saisies et les sommes issues de l'aliénation des biens prévue à l'article 649.82 du code de procédure pénale sont déposées sur un compte de dépôt ouvert à la Caisse des dépôts et consignations.</p>
+
+          <p><strong>Article 12 :</strong> L'Agence dispose d'un budget de fonctionnement, dont le Directeur Général est l'ordonnateur. Ce budget comprend les ressources nécessaires au fonctionnement de l'établissement. Il est alimenté par une contribution de l'Etat sous forme d'affectation spéciale dans la loi de finances.</p>
+
+          <p><strong>Article 13 :</strong> Le Directeur Général transmet aux Ministres de la Justice et des Finances les rapports semestriels et le rapport annuel après approbation du Conseil d'Administration.</p>
+
+          <p><strong>Article 14 :</strong> Les ressources de l'Agence centrale sont constituées des dotations de l'Etat, des ressources de l'exploitation de l'Agence et de dons et legs.</p>
+
+          <p><strong>Article 15 :</strong> Les rémunérations et les autres avantages alloués au personnel de l'Agence Centrale sont fixés par le Conseil d'Administration et soumis à l'approbation des Ministres de tutelle.</p>
+
+          <h4>Chapitre IV : De la procédure de passation des marchés de l'ACGSCGRA</h4>
+
+          <p><strong>Article 16 :</strong> Les fournitures et services acquis par l'Agence centrale et les travaux réalisés pour son compte donnent lieu à l'établissement de marchés passés dans les conditions fixées par la réglementation relative aux marchés publics et aux délégations de service public.</p>
+
+          <h4>Chapitre V : Des dispositions diverses et finales</h4>
+
+          <p><strong>Article 17 :</strong> La dissolution de l'Agence centrale est décidée dans les mêmes formes que sa création et sa mise en liquidation est décidée par décret.</p>
+          <p>Le décret de mise en liquidation porte nomination du liquidateur qui remplace le conseil d'Administration et les organes de direction pendant la période de liquidation, et fixe les conditions de sa mission.</p>
+          <p>A la clôture des opérations de liquidation, les biens meubles et immeubles de l'Agence restant à l'actif sont reversés au patrimoine de l'Etat et les deniers et valeurs, au Trésor Public.</p>
+          <p>L'apurement du passif sera assuré par l'Etat.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- ================= PRESENTATION ================= -->
-    <section class="presentation">
-
-        <div class="presentation-text">
-            <span>
-                NOTRE CLUB
-            </span>
-
-            <h2>
-                Une équipe, une famille 26/27
-            </h2>
-
-            <p>
-                MON ÉQUIPE est un club de football créé
-                autour d'une passion commune pour le sport.
-            </p>
-
-            <p>
-                Notre objectif est de progresser ensemble,
-                respecter nos adversaires et donner le
-                meilleur de nous-mêmes à chaque match.
-            </p>
-
-            <a href="#equipe" class="btn">
-                Voir nos équipes
-            </a>
+     
+      <div class="doc-card">
+        <h3>Biens saisis</h3>
+        <p>Motocyclettes saisies dans le cadre de procédures pénales, en attente de gestion par l'Agence.</p>
+        <button type="button" class="btn btn-primary" onclick="toggleDoc('photos')">
+          les motos et vehicules disponible
+        </button>
+        <div id="doc-photos" class="photo-gallery" style="display:none;">
+          <img src="photo_5972062664458440167_y.jpg" alt="Motocyclettes saisies, vue 1">
+          <img src="photo_5972062664458440168_y.jpg" alt="Motocyclettes saisies, vue 2">
+          <img src="photo_5972062664458440169_y.jpg" alt="Motocyclettes saisies, vue 3">
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ================= STATISTIQUES ================= -->
-    <section class="stats">
-        <div class="stat">
-            <strong class="counter" data-target="2">
-                2
-            </strong>
-            <span>
-                Équipes
-            </span>
-        </div>
+<section class="organigramme" id="organigramme">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Organisation</p>
+    <h2>Organigramme de l'ACGSCGRA</h2>
 
-        <div class="stat">
-            <strong class="counter" data-target="2">
-                0
-            </strong>
-            <span>
-                Matchs
-            </span>
-        </div>
+    <div class="org-chart">
+      <div class="org-row org-row-1">
+        <div class="org-box org-box-top">Président du Conseil d'Administration</div>
+      </div>
+      <div class="org-connector"></div>
 
-        <div class="stat">
-            <strong class="counter" data-target="0">
-                0
-            </strong>
-            <span>
-                Victoires
-            </span>
-        </div>
+      <div class="org-row org-row-2">
+        <div class="org-box">Directeur Général</div>
+      </div>
 
-        <div class="stat">
-            <strong class="counter" data-target="0">
-                0
-            </strong>
-            <span>
-                Buts
-            </span>
-        </div>
-    </section>
+      <div class="org-branch-3">
+        <div class="org-box org-box-side">Service Informatique</div>
+        <div class="org-box">Secrétaire Général</div>
+        <div class="org-box org-box-side">Secrétariat DG</div>
+      </div>
 
-    <!-- ================= CHOIX DES JOUEURS ================= -->
-    <section id="equipe" class="section">
-        <div class="section-title">
-            <p>
-                NOS ÉQUIPES
-            </p>
+      <div class="org-connector"></div>
 
-            <h2>
-            </h2>
-        </div>
+      <div class="org-services">
+        <div class="org-box org-box-small">Service des Ressources Humaines et du Matériel</div>
+        <div class="org-box org-box-small">Service des Affaires Judiciaires</div>
+        <div class="org-box org-box-small">Service de Gestion des Biens</div>
+        <div class="org-box org-box-small">Service des Investigations</div>
+        <div class="org-box org-box-small">Service des Identifications</div>
+        <div class="org-box org-box-small">Service Comptabilité</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="joueurs" id="joueurs">
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Nous contacter</p>
+    <h2>Coordonnées de l'Agence</h2>
+    <dl class="contact-meta">
+      <div><dt>Adresse</dt><dd>BP: 466 Niamey, Niger</dd></div>
+      <div><dt>Téléphone</dt><dd>20 32 47 49</dd></div>
+      <div><dt>E-mail</dt><dd>acgscgra@gmail.com</dd></div>
+    </dl>
+  </div>
+</section>
 
-            <!-- ================= ÉQUIPE CLAUDE ================= -->
-            <div class="joueur">
-                <div class="joueur-info">
-                    <span>
-                        ÉQUIPE CLAUDE
-                    </span>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 ACGSCGRA — République du Niger</span>
+  </div>
+</footer>
 
-                    <h3>
-                        Équipe Claude
-                    </h3>
+<script>
+  function toggleDoc(name) {
+    const el = document.getElementById('doc-' + name);
+    el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+  }
 
-                    <p>
-                        1. Moctaor<br>
-                        2. Hassan (ancien)<br>
-                        3. Abel<br>
-                        4. Alpha<br>
-                        5. Aaron<br>
-                        6. Ismael<br>
-                        7. Abdouraz<br>
-                        8. Mohamed
-                    </p>
-                </div>
-            </div>
-
-            <!-- ================= ÉQUIPE CHATGPT ================= -->
-            <div class="joueur">
-                <div class="joueur-info">
-                    <span>
-                        ÉQUIPE CHATGPT
-                    </span>
-
-                    <h3>
-                        Équipe ChatGPT
-                    </h3>
-
-                    <p>
-                        1. Moussa<br>
-                        2. Grivis<br>
-                        3. Djona<br>
-                        4. Stoyi<br>
-                        5. Hassan<br>
-                        6. toheb<br>
-                        7. Mahamad<br>
-                        8. Steve
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================= MATCHS ================= -->
-    <section id="matchs" class="section matchs-section">
-        <div class="section-title">
-            <p>
-                CALENDRIER
-            </p>
-
-            <h2>
-                Nos matchs
-            </h2>
-        </div>
-
-        <div class="matchs">
-
-            <!-- ================= MATCH 1 ================= -->
-            <div class="match">
-                <div class="date">
-                    <strong>
-                        .......
-                    </strong>
-
-                    <span>
-                        OCT
-                    </span>
-                </div>
-
-                <div class="equipes">
-                    <span>
-                        MON ÉQUIPE
-                    </span>
-
-                    <b>
-                        VS
-                    </b>
-
-                    <span>
-                        ADVERSAIRE
-                    </span>
-                </div>
-
-                <div class="heure">
-                    16:00
-                </div>
-            </div>
-
-            <!-- ================= MATCH 2 ================= -->
-            <div class="match">
-                <div class="date">
-                    <strong>
-                        .......
-                    </strong>
-
-                    <span>
-                        OCT
-                    </span>
-                </div>
-
-                <div class="equipes">
-                    <span>
-                        MON ÉQUIPE
-                    </span>
-
-                    <b>
-                        VS
-                    </b>
-
-                    <span>
-                        ADVERSAIRE
-                    </span>
-                </div>
-
-                <div class="heure">
-                    17:00
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================= TROPHEES ================= -->
-    <section id="trophees" class="section">
-        <div class="section-title">
-            <p>
-                NOS RÉCOMPENSES
-            </p>
-
-            <h2>
-                Trophées
-            </h2>
-        </div>
-
-        <div class="trophees">
-            <div class="trophee">
-                <div class="trophee-icon">
-                    🏆
-                </div>
-
-                <h3>
-                    Champion
-                </h3>
-
-                <p>
-                    Notre objectif est de gagner ensemble.
-                </p>
-            </div>
-
-            <div class="trophee">
-                <div class="trophee-icon">
-                    🥇
-                </div>
-
-                <h3>
-                    Première place
-                </h3>
-
-                <p>
-                    Travail, discipline et passion.
-                </p>
-            </div>
-
-            <div class="trophee">
-                <div class="trophee-icon">
-                    ⚽
-                </div>
-
-                <h3>
-                    Esprit d'équipe
-                </h3>
-
-                <p>
-                    Une équipe, une famille.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= GALERIE ================= -->
-    <section id="galerie" class="section">
-        <div class="section-title">
-            <p>
-                NOS MOMENTS
-            </p>
-
-            <h2>
-                Galerie
-            </h2>
-        </div>
-
-        <div class="galerie">
-            <div class="galerie-item">
-                <img src="5906934506231370193.jpg" alt="MON ÉQUIPE - Galerie">
-            </div>
-            v>
-        </div>
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-    <section class="section contact">
-        <div class="section-title">
-            <p>
-                CONTACT
-            </p>
-
-            <h2>
-                Rejoignez MON ÉQUIPE
-            </h2>
-        </div>
-
-        <div class="contact-content">
-            <p>
-                Une équipe, une passion et un seul objectif :
-                avancer ensemble.
-            </p>
-
-            <a href="#accueil" class="btn">
-                Retour en haut
-            </a>
-        </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="footer-content">
-            <div class="logo">
-                ⚽ MON ÉQUIPE
-            </div>
-
-            <p>
-                © 2026 MON ÉQUIPE — Tous droits réservés.
-            </p>
-        </div>
-    </footer>
-
-    <!-- ================= JAVASCRIPT ================= -->
-    <script src="script.js"></script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 
 </body>
-
 </html>

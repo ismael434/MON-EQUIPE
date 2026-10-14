@@ -4,387 +4,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MON ÉQUIPE - Football</title>
+    <meta name="theme-color" content="#07110c">
+    <meta name="description" content="MON ÉQUIPE — une équipe, une passion, un objectif : la victoire.">
+    <title>MON ÉQUIPE | Football</title>
     <link rel="stylesheet" href="isma.css">
 </head>
 
 <body>
-
-    <!-- ================= NAVBAR ================= -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                ⚽ MON ÉQUIPE
-            </div>
-
-            <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
-                ☰
-            </button>
-
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a class="logo" href="#accueil"><span class="logo-ball">⚽</span> MON <span>ÉQUIPE</span></a>
+            <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false"
+                aria-controls="menu">☰</button>
             <ul class="menu" id="menu">
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#club">Le club</a></li>
+                <li><a href="#equipe">Équipes</a></li>
                 <li><a href="#matchs">Matchs</a></li>
                 <li><a href="#trophees">Trophées</a></li>
                 <li><a href="#galerie">Galerie</a></li>
             </ul>
-
-            <button id="themeBtn" class="theme-btn" aria-label="Changer le thème">
-                🌙
-            </button>
+            <button id="themeBtn" class="theme-btn" aria-label="Activer le thème clair"
+                title="Changer de thème">☀️</button>
         </nav>
     </header>
 
-    <!-- ================= ACCUEIL ================= -->
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <p class="subtitle">
-                BIENVENUE CHEZ
-            </p>
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <p class="eyebrow"><span></span> SAISON 2026 / 2027</p>
+                <h1>UNE ÉQUIPE.<br><span>UNE PASSION.</span><br>UN OBJECTIF.</h1>
+                <p class="hero-description">Bienvenue chez MON ÉQUIPE, là où l'esprit collectif nous pousse à viser la
+                    victoire.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#equipe">Découvrir nos équipes <span>→</span></a>
+                    <a class="btn btn-outline" href="#matchs">Voir le calendrier</a>
+                </div>
+                <div class="hero-note"><span class="live-dot"></span> Esprit d'équipe · Respect · Détermination</div>
+            </div>
+            <a class="scroll-cue" href="#club" aria-label="Défiler vers la présentation">↓</a>
+        </section>
 
-            <h1>
-                MON ÉQUIPE
-            </h1>
+        <section id="club" class="presentation section-pad">
+            <div class="container presentation-grid">
+                <div class="presentation-image image-frame">
+                    <img src="5906934506231370193.jpg" alt="Les joueurs de MON ÉQUIPE" loading="lazy">
+                    <span class="image-label">LA FAMILLE MON ÉQUIPE</span>
+                </div>
+                <div class="presentation-text">
+                    <p class="eyebrow"><span></span> NOTRE CLUB</p>
+                    <h2>Plus qu'un club,<br><span>une famille.</span></h2>
+                    <p>MON ÉQUIPE est née d'une passion commune pour le football et du désir de progresser ensemble.</p>
+                    <p>Sur le terrain comme en dehors, nous avançons avec le respect, la solidarité et la détermination.
+                    </p>
+                    <a class="text-link" href="#equipe">Rencontrer les équipes ↗</a>
+                </div>
+            </div>
+        </section>
 
-            <p class="description">
-                Une équipe, une passion, un objectif :
-                la victoire.
-            </p>
+        <section class="stats-band" aria-label="Chiffres du club">
+            <div class="container stats-grid">
+                <div class="stat"><strong class="counter" data-target="2">2</strong><span>Équipes</span></div>
+                <div class="stat"><strong class="counter" data-target="16">16</strong><span>Joueurs listés</span></div>
+                <div class="stat"><strong>2026/27</strong><span>Notre saison</span></div>
+                <div class="stat"><strong>1</strong><span>Esprit collectif</span></div>
+            </div>
+        </section>
 
-            <a href="#equipe" class="btn">
-                Découvrir l'équipe
-            </a>
-        </div>
-    </section>
+        <section id="equipe" class="section-pad section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> NOS JOUEURS</p>
+                        <h2>Deux équipes.<br><span>Le même esprit.</span></h2>
+                    </div>
+                    <p class="section-intro">Découvrez les joueurs qui composent MON ÉQUIPE.</p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card team-card-one">
+                        <div class="team-card-top"><span class="team-index">01</span><span class="team-badge">⚽</span>
+                        </div>
+                        <p class="team-kicker">GROUPE A</p>
+                        <h3>Équipe Claude</h3>
+                        <ol class="player-list">
+                            <li>Moctaor</li>
+                            <li>Hassan <small>(ancien)</small></li>
+                            <li>Abel</li>
+                            <li>Alpha</li>
+                            <li>Aaron</li>
+                            <li>Ismael</li>
+                            <li>Abdouraz</li>
+                            <li>Mohamed</li>
+                        </ol>
+                    </article>
+                    <article class="team-card team-card-two">
+                        <div class="team-card-top"><span class="team-index">02</span><span class="team-badge">🏆</span>
+                        </div>
+                        <p class="team-kicker">GROUPE B</p>
+                        <h3>Équipe ChatGPT</h3>
+                        <ol class="player-list">
+                            <li>Moussa</li>
+                            <li>Grivis</li>
+                            <li>Djona</li>
+                            <li>Stoyi</li>
+                            <li>Hassan</li>
+                            <li>Toheb</li>
+                            <li>Mahamad</li>
+                            <li>Steve</li>
+                        </ol>
+                    </article>
+                </div>
+                <p class="edit-tip">✦ Pour changer un nom, modifie le texte dans la liste correspondante.</p>
+            </div>
+        </section>
 
-    <!-- ================= PRESENTATION ================= -->
-    <section class="presentation">
+        <section id="matchs" class="section-pad">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> RESTONS PRÊTS</p>
+                        <h2>Le calendrier<br><span>des matchs.</span></h2>
+                    </div>
+                    <p class="section-intro">Les dates et les adversaires seront ajoutés quand les rencontres seront
+                        confirmées.</p>
+                </div>
+                <div class="match-list">
+                    <article class="match-card">
+                        <div class="match-number">MATCH 01</div>
+                        <div class="match-date"><strong>À définir</strong><span>DATE</span></div>
+                        <div class="match-teams"><span>MON ÉQUIPE</span><b>VS</b><span>ADVERSAIRE</span></div>
+                        <div class="match-time">Heure à confirmer</div>
+                    </article>
+                    <article class="match-card">
+                        <div class="match-number">MATCH 02</div>
+                        <div class="match-date"><strong>À définir</strong><span>DATE</span></div>
+                        <div class="match-teams"><span>MON ÉQUIPE</span><b>VS</b><span>ADVERSAIRE</span></div>
+                        <div class="match-time">Heure à confirmer</div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="presentation-text">
-            <span>
-                NOTRE CLUB
-            </span>
-
-            <h2>
-                Une équipe, une famille 26/27
-            </h2>
-
-            <p>
-                MON ÉQUIPE est un club de football créé
-                autour d'une passion commune pour le sport.
-            </p>
-
-            <p>
-                Notre objectif est de progresser ensemble,
-                respecter nos adversaires et donner le
-                meilleur de nous-mêmes à chaque match.
-            </p>
-
-            <a href="#equipe" class="btn">
-                Voir nos équipes
-            </a>
-        </div>
-    </section>
-
-    <!-- ================= STATISTIQUES ================= -->
-    <section class="stats">
-        <div class="stat">
-            <strong class="counter" data-target="2">
-                2
-            </strong>
-            <span>
-                Équipes
-            </span>
-        </div>
-
-        <div class="stat">
-            <strong class="counter" data-target="2">
-                0
-            </strong>
-            <span>
-                Matchs
-            </span>
-        </div>
-
-        <div class="stat">
-            <strong class="counter" data-target="0">
-                0
-            </strong>
-            <span>
-                Victoires
-            </span>
-        </div>
-
-        <div class="stat">
-            <strong class="counter" data-target="0">
-                0
-            </strong>
-            <span>
-                Buts
-            </span>
-        </div>
-    </section>
-
-    <!-- ================= CHOIX DES JOUEURS ================= -->
-    <section id="equipe" class="section">
-        <div class="section-title">
-            <p>
-                NOS ÉQUIPES
-            </p>
-
-            <h2>
-            </h2>
-        </div>
-
-        <div class="joueurs" id="joueurs">
-
-            <!-- ================= ÉQUIPE CLAUDE ================= -->
-            <div class="joueur">
-                <div class="joueur-info">
-                    <span>
-                        ÉQUIPE CLAUDE
-                    </span>
-
-                    <h3>
-                        Équipe Claude
-                    </h3>
-
-                    <p>
-                        1. Moctaor<br>
-                        2. Hassan (ancien)<br>
-                        3. Abel<br>
-                        4. Alpha<br>
-                        5. Aaron<br>
-                        6. Ismael<br>
-                        7. Abdouraz<br>
-                        8. Mohamed
+        <section id="trophees" class="section-pad trophy-section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> NOS AMBITIONS</p>
+                        <h2>Le goût de<br><span>la victoire.</span></h2>
+                    </div>
+                    <p class="section-intro">Chaque trophée commence par l'effort, la discipline et le travail d'équipe.
                     </p>
                 </div>
-            </div>
-
-            <!-- ================= ÉQUIPE CHATGPT ================= -->
-            <div class="joueur">
-                <div class="joueur-info">
-                    <span>
-                        ÉQUIPE CHATGPT
-                    </span>
-
-                    <h3>
-                        Équipe ChatGPT
-                    </h3>
-
-                    <p>
-                        1. Moussa<br>
-                        2. Grivis<br>
-                        3. Djona<br>
-                        4. Stoyi<br>
-                        5. Hassan<br>
-                        6. toheb<br>
-                        7. Mahamad<br>
-                        8. Steve
-                    </p>
+                <div class="trophy-grid">
+                    <article class="trophy-card"><span>🏆</span>
+                        <h3>Le collectif</h3>
+                        <p>Jouer ensemble et se soutenir jusqu'au bout.</p>
+                    </article>
+                    <article class="trophy-card"><span>🥇</span>
+                        <h3>La progression</h3>
+                        <p>Apprendre à chaque entraînement et chaque match.</p>
+                    </article>
+                    <article class="trophy-card"><span>🤝</span>
+                        <h3>Le respect</h3>
+                        <p>Respecter ses coéquipiers, l'adversaire et le jeu.</p>
+                    </article>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- ================= MATCHS ================= -->
-    <section id="matchs" class="section matchs-section">
-        <div class="section-title">
-            <p>
-                CALENDRIER
-            </p>
-
-            <h2>
-                Nos matchs
-            </h2>
-        </div>
-
-        <div class="matchs">
-
-            <!-- ================= MATCH 1 ================= -->
-            <div class="match">
-                <div class="date">
-                    <strong>
-                        .......
-                    </strong>
-
-                    <span>
-                        OCT
-                    </span>
+        <section id="galerie" class="section-pad section-dark">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> EN IMAGES</p>
+                        <h2>La vie du<br><span>club.</span></h2>
+                    </div>
+                    <p class="section-intro">Clique sur une photo pour l'agrandir. Tu peux remplacer les images par tes
+                        propres photos.</p>
                 </div>
-
-                <div class="equipes">
-                    <span>
-                        MON ÉQUIPE
-                    </span>
-
-                    <b>
-                        VS
-                    </b>
-
-                    <span>
-                        ADVERSAIRE
-                    </span>
-                </div>
-
-                <div class="heure">
-                    16:00
+                <div class="gallery-grid">
+                    <button class="gallery-item gallery-large" data-gallery-image="5906934506231370193.jpg"
+                        aria-label="Agrandir la photo de l'équipe">
+                        <img src="5906934506231370193.jpg" alt="Photo de MON ÉQUIPE" loading="lazy"><span>MON ÉQUIPE
+                            <b>↗</b></span>
+                    </button>
+                    <button class="gallery-item" data-gallery-image="5906934506231370193.jpg"
+                        aria-label="Agrandir la photo du club">
+                        <img src="5906934506231370193.jpg" alt="La famille du club" loading="lazy"><span>LA FAMILLE
+                            <b>↗</b></span>
+                    </button>
+                    <button class="gallery-item" data-gallery-image="5906934506231370193.jpg"
+                        aria-label="Agrandir la photo des joueurs">
+                        <img src="5906934506231370193.jpg" alt="Les joueurs du club" loading="lazy"><span>LES JOUEURS
+                            <b>↗</b></span>
+                    </button>
                 </div>
             </div>
+        </section>
 
-            <!-- ================= MATCH 2 ================= -->
-            <div class="match">
-                <div class="date">
-                    <strong>
-                        .......
-                    </strong>
-
-                    <span>
-                        OCT
-                    </span>
-                </div>
-
-                <div class="equipes">
-                    <span>
-                        MON ÉQUIPE
-                    </span>
-
-                    <b>
-                        VS
-                    </b>
-
-                    <span>
-                        ADVERSAIRE
-                    </span>
-                </div>
-
-                <div class="heure">
-                    17:00
-                </div>
+        <section class="contact-section section-pad">
+            <div class="container contact-panel">
+                <p class="eyebrow"><span></span> MON ÉQUIPE</p>
+                <h2>Ensemble, allons<br><span>plus loin.</span></h2>
+                <p>Une passion commune. Une équipe soudée. Un objectif partagé.</p>
+                <a class="btn btn-primary" href="#accueil">Retour en haut ↑</a>
             </div>
+        </section>
+    </main>
 
-        </div>
-    </section>
-
-    <!-- ================= TROPHEES ================= -->
-    <section id="trophees" class="section">
-        <div class="section-title">
-            <p>
-                NOS RÉCOMPENSES
-            </p>
-
-            <h2>
-                Trophées
-            </h2>
-        </div>
-
-        <div class="trophees">
-            <div class="trophee">
-                <div class="trophee-icon">
-                    🏆
-                </div>
-
-                <h3>
-                    Champion
-                </h3>
-
-                <p>
-                    Notre objectif est de gagner ensemble.
-                </p>
-            </div>
-
-            <div class="trophee">
-                <div class="trophee-icon">
-                    🥇
-                </div>
-
-                <h3>
-                    Première place
-                </h3>
-
-                <p>
-                    Travail, discipline et passion.
-                </p>
-            </div>
-
-            <div class="trophee">
-                <div class="trophee-icon">
-                    ⚽
-                </div>
-
-                <h3>
-                    Esprit d'équipe
-                </h3>
-
-                <p>
-                    Une équipe, une famille.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= GALERIE ================= -->
-    <section id="galerie" class="section">
-        <div class="section-title">
-            <p>
-                NOS MOMENTS
-            </p>
-
-            <h2>
-                Galerie
-            </h2>
-        </div>
-
-        <div class="galerie">
-            <div class="galerie-item">
-                <img src="5906934506231370193.jpg" alt="MON ÉQUIPE - Galerie">
-            </div>
-            v>
-        </div>
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-    <section class="section contact">
-        <div class="section-title">
-            <p>
-                CONTACT
-            </p>
-
-            <h2>
-                Rejoignez MON ÉQUIPE
-            </h2>
-        </div>
-
-        <div class="contact-content">
-            <p>
-                Une équipe, une passion et un seul objectif :
-                avancer ensemble.
-            </p>
-
-            <a href="#accueil" class="btn">
-                Retour en haut
-            </a>
-        </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="footer-content">
-            <div class="logo">
-                ⚽ MON ÉQUIPE
-            </div>
-
-            <p>
-                © 2026 MON ÉQUIPE — Tous droits réservés.
-            </p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="logo" href="#accueil">⚽ MON <span>ÉQUIPE</span></a>
+            <p>© <span id="year">2026</span> MON ÉQUIPE — Tous droits réservés.</p>
+            <a href="#accueil" class="footer-top">Retour en haut ↑</a>
         </div>
     </footer>
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo agrandie">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fermer la photo">×</button>
+        <img id="lightboxImage" src="" alt="Photo agrandie de MON ÉQUIPE">
+    </div>
     <script src="script.js"></script>
-
 </body>
 
 </html>

@@ -1,208 +1,129 @@
 
-/* =====================================
-   MENU MOBILE
-===================================== */
+(() => {
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    const themeBtn = document.getElementById('themeBtn');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
 
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+    // Menu pour téléphone
+    if (menuBtn && menu) {
+        menuBtn.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('open');
 
-menuBtn.addEventListener("click", function () {
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+            menuBtn.setAttribute(
+                'aria-label',
+                isOpen ? 'Fermer le menu' : 'Ouvrir le menu'
+            );
+            menuBtn.textContent = isOpen ? '×' : '☰';
+        });
 
-    menu.classList.toggle("active");
-
-});
-
-
-/* Fermer le menu après avoir
-   cliqué sur un lien */
-
-const menuLinks = document.querySelectorAll(".menu a");
-
-menuLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        menu.classList.remove("active");
-
-    });
-
-});
-
-
-/* =====================================
-   MODE SOMBRE / MODE CLAIR
-===================================== */
-
-const themeBtn = document.getElementById("themeBtn");
-
-themeBtn.addEventListener("click", function () {
-
-    document.body.classList.toggle("light");
-
-
-    if (document.body.classList.contains("light")) {
-
-        themeBtn.textContent = "☀️";
-
-    } else {
-
-        themeBtn.textContent = "🌙";
-
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Ouvrir le menu');
+                menuBtn.textContent = '☰';
+            });
+        });
     }
 
-});
+    // Changer entre le thème sombre et le thème clair
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.body.classList.toggle('light-theme');
 
+            themeBtn.textContent = isLight ? '🌙' : '☀️';
+            themeBtn.setAttribute(
+                'aria-label',
+                isLight ? 'Activer le thème sombre' : 'Activer le thème clair'
+            );
+        });
+    }
 
-/* =====================================
-   RECHERCHE DES JOUEURS
-===================================== */
+    // Animation des compteurs
+    const counters = document.querySelectorAll('.counter');
 
-const searchInput =
-    document.getElementById("searchInput");
+    const animateCounter = element => {
+        const target = Number(element.dataset.target || 0);
+        const duration = 700;
+        const start = performance.now();
 
-const joueurs =
-    document.querySelectorAll(".joueur");
+        const step = now => {
+            const progress = Math.min((now - start) / duration, 1);
 
+            element.textContent = String(Math.round(target * progress));
 
-searchInput.addEventListener("input", function () {
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
 
-    const recherche =
-        searchInput.value.toLowerCase();
+        requestAnimationFrame(step);
+    };
 
+    if ('IntersectionObserver' in window && counters.length) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
 
-    joueurs.forEach(function (joueur) {
+        counters.forEach(counter => observer.observe(counter));
+    }
 
-        const nom =
-            joueur.querySelector("h3")
-            .textContent
-            .toLowerCase();
+    // Galerie photo : ouvrir une photo en grand
+    const closeLightbox = () => {
+        if (!lightbox) return;
 
-        const poste =
-            joueur.querySelector("p")
-            .textContent
-            .toLowerCase();
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
 
-
-        if (
-            nom.includes(recherche) ||
-            poste.includes(recherche)
-        ) {
-
-            joueur.style.display = "block";
-
-        } else {
-
-            joueur.style.display = "none";
-
+        if (lightboxImage) {
+            lightboxImage.src = '';
         }
+    };
 
+    document.querySelectorAll('[data-gallery-image]').forEach(button => {
+        button.addEventListener('click', () => {
+            if (!lightbox || !lightboxImage) return;
+
+            lightboxImage.src = button.dataset.galleryImage;
+            lightboxImage.alt =
+                button.querySelector('img')?.alt || 'Photo de MON ÉQUIPE';
+
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+
+            lightboxClose?.focus();
+        });
     });
 
-});
+    lightboxClose?.addEventListener('click', closeLightbox);
 
-
-/* =====================================
-   COMPTEUR ANIME
-===================================== */
-
-const counters =
-    document.querySelectorAll(".counter");
-
-
-counters.forEach(function (counter) {
-
-    const target =
-        Number(counter.dataset.target);
-
-    let nombre = 0;
-
-    const vitesse = 50;
-
-
-    const animation = setInterval(function () {
-
-        nombre++;
-
-        counter.textContent = nombre;
-
-
-        if (nombre >= target) {
-
-            clearInterval(animation);
-
+    lightbox?.addEventListener('click', event => {
+        if (event.target === lightbox) {
+            closeLightbox();
         }
-
-    }, vitesse);
-
-});
-
-
-/* =====================================
-   GALERIE
-===================================== */
-
-const galleryImages =
-    document.querySelectorAll(".gallery-image");
-
-const modal =
-    document.getElementById("imageModal");
-
-const modalImage =
-    document.getElementById("modalImage");
-
-const closeModal =
-    document.getElementById("closeModal");
-
-
-galleryImages.forEach(function (image) {
-
-    image.addEventListener("click", function () {
-
-        modal.classList.add("active");
-
-        modalImage.src = image.src;
-
     });
 
-});
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closeLightbox();
+        }
+    });
 
+    // Afficher automatiquement l'année actuelle
+    const year = document.getElementById('year');
 
-/* =====================================
-   FERMER LA PHOTO
-===================================== */
-
-closeModal.addEventListener("click", function () {
-
-    modal.classList.remove("active");
-
-});
-
-
-/* Fermer si on clique
-   en dehors de la photo */
-
-modal.addEventListener("click", function (event) {
-
-    if (event.target === modal) {
-
-        modal.classList.remove("active");
-
+    if (year) {
+        year.textContent = String(new Date().getFullYear());
     }
-
-});
-
-
-/* =====================================
-   TOUCHE ESCAPE
-===================================== */
-
-document.addEventListener("keydown", function (event) {
-
-    if (event.key === "Escape") {
-
-        modal.classList.remove("active");
-
-    }
-
-});
-
+})();

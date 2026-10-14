@@ -1,0 +1,33 @@
+MON ÉQUIPE — PACK DE MISE À JOUR
+
+Fichiers inclus :
+- index.html : page d'accueil utilisée automatiquement par GitHub Pages
+- ismo.html : même site accessible aussi par /ismo.html
+- isma.css : mise en page responsive (ordinateur et téléphone)
+- script.js : menu mobile, changement de thème et galerie photo
+
+IMPORTANT POUR LA PHOTO :
+Gardez votre photo dans le même dossier que index.html et nommez-la exactement :
+5906934506231370193.jpg
+Le pack ne remplace pas votre photo personnelle.
+
+INSTALLATION DANS LE PROJET LOCAL :
+1. Faites une copie de sauvegarde de votre dossier.
+2. Copiez les 4 fichiers du pack dans votre dossier de projet.
+3. Conservez 5906934506231370193.jpg à la racine du projet.
+4. Ouvrez index.html dans le navigateur pour tester.
+5. Dans Git Bash, depuis le dossier qui contient .git, vérifiez d'abord la branche et le dépôt :
+   git status
+   git branch
+   git remote -v
+6. Si vous êtes bien dans le dépôt MON-EQUIPE et sur la branche master :
+   git add index.html ismo.html isma.css script.js
+   git commit -m "Finaliser le site MON EQUIPE"
+   git push origin master
+
+GITHUB PAGES :
+Dans Settings > Pages, vérifiez que la source est Deploy from a branch, que la branche publiée est master et que le dossier est /(root). Si votre configuration utilise main, ne changez pas la branche sans vérifier où se trouve la version que vous souhaitez publier.
+
+À PERSONNALISER :
+- Les dates/adversaires des matchs sont laissés « à définir » pour éviter d'inventer des rencontres.
+- Les trois vignettes de galerie utilisent votre photo actuelle comme exemple. Vous pouvez remplacer chaque chemin d'image par le nom d'une autre photo placée dans le même dossier.
